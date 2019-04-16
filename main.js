@@ -1,5 +1,6 @@
 'use strict'
 
 console.log('Loading a module')
-require('./mod')
+let mod = require('./mod')
+console.log('Mod:', mod)
 console.log('Done')
