@@ -1,0 +1,11 @@
+body {
+    background-color: powderblue;
+    }
+    #addStudentButton {
+    color: blue;
+    border: 5px solid black;
+    }
+    .student {
+    color: red;
+    border: 5px solid black;
+    }

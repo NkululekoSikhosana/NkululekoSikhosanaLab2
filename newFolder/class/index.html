@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Test Page</title>
+		<meta charset = "utf-8"/>
+	</head>
+	
+	<body>
+	<h1>Trip Planer</h1>
+		<input type="text" id="nameOfUser" placeholder="Type username" value="">
+		<input type="text" id="origin" placeholder="Origin" value="">
+		<input type="text" id="destination" placeholder="Destination" value="">
+		<input type="date" id="tripDate" value="">
+		<input type="date" id="returnDate" value="">
+		
+		<button id="addTrip">Add Trip</button>
+
+		<div id="trips">
+		</div>
+		
+		<script>
+				let button = document.getElementById('addTrip')
+				
+				button.addEventListener('click', function () {
+					let destinationName = document.getElementById('destination').value
+					let startName = document.getElementById('origin').value
+					let startDate = document.getElementById('tripDate').value
+					let endDate = document.getElementById('returnDate').value
+					let username = document.getElementById('nameOfUser').value
+
+					let paragraph = document.createElement('p') // Create <p> element
+					let text = document.createTextNode('Trip to ' + destinationName + ' from ' + startName + ' by ' + username + ' from the ' + startDate + ' until the ' + endDate) // Create text node
+					paragraph.appendChild(text) // Append the text to <p>
+				  
+					let tripSummary = document.getElementById('trips')
+					tripSummary.appendChild(paragraph) // Append <p> to <body>
+				}, false)
+		</script>
+
+	</body>
+</html>
